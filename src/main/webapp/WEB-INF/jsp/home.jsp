@@ -7,5 +7,13 @@
     </head>
     <body>
         Hello World! 
+        https://www.callicoder.com/hibernate-spring-boot-jpa-one-to-many-mapping-example/
+        
+        <br>
+        
+        https://dzone.com/articles/introduction-to-jpa-using-spring-boot-data-jpa
+        
+        <br>
+        http://www.springboottutorial.com/introduction-to-jpa-with-spring-boot-data-jpa
     </body>
 </html>

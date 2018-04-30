@@ -57,4 +57,9 @@ public class Purchase {
         this.amount = amount;
     }
 
+    @Override
+    public String toString() {
+        return "Purchase{" + "id=" + id + ", product=" + product + ", quantity=" + quantity + ", unit=" + unit + ", rate=" + rate + ", amount=" + amount + '}';
+    }
+
 }
