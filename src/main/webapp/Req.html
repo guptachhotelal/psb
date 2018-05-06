@@ -1,11 +1,55 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div>TODO write content</div>
-    </body>
-</html>
+CREATE TABLE bill_company (
+  COMPANY_ID int NOT NULL,
+  COMPANY_NAME varchar(200) NOT NULL,
+  ADDRESS varchar(200) DEFAULT NULL,
+  CITY varchar(25) DEFAULT NULL,
+  ZIP varchar(10) NOT NULL,
+  STATE char(2) DEFAULT NULL,
+  PHONE_1 char(12) DEFAULT NULL,
+  PHONE_2 char(12) DEFAULT NULL,
+  FAX char(12) DEFAULT NULL,
+  EMAIL varchar(40) DEFAULT NULL,
+  CREDIT_LIMIT int DEFAULT NULL,
+  ACTIVE tinyint DEFAULT NULL,
+  PRIMARY KEY (COMPANY_ID)
+);
+
+
+CREATE TABLE bill_customer (
+  CUSTOMER_ID int NOT NULL,
+  CUSTOMER_NAME varchar(200) NOT NULL,
+  CONTAT_PERSON varchar(200) NOT NULL,
+  ADDRESS varchar(200) DEFAULT NULL,
+  CITY varchar(25) DEFAULT NULL,
+  ZIP varchar(10) NOT NULL,
+  STATE char(2) DEFAULT NULL,
+  PHONE_1 char(12) DEFAULT NULL,
+  PHONE_2 char(12) DEFAULT NULL,
+  FAX char(12) DEFAULT NULL,
+  EMAIL varchar(40) DEFAULT NULL,
+  CREDIT_LIMIT int DEFAULT NULL,
+  ACTIVE tinyint DEFAULT NULL,
+  PRIMARY KEY (CUSTOMER_ID)
+);
+
+
+CREATE TABLE bill_item (
+  ITEM_ID int IDENTITY(1,1) PRIMARY KEY,
+  MANUFACTURER_ID int NOT NULL,
+  ITEM_CODE varchar(10) NOT NULL,
+  ITEM_COST decimal(12,2) DEFAULT NULL,
+  AVAILABLE_QUANTITY INT DEFAULT NULL,
+  DESCRIPTION varchar(50) DEFAULT NULL,
+)
+
+
+CREATE TABLE bill_order (
+  ORDER_ID int IDENTITY(1,1) NOT NULL,
+  CUSTOMER_ID int NOT NULL,
+  ITEM_ID int NOT NULL,
+  QUANTITY smallint DEFAULT NULL,
+  SHIPPING_COST decimal(12,2) DEFAULT NULL,
+  SALES_DATE DATETIME NULL DEFAULT NULL,
+  SHIPPING_DATE DATETIME NULL DEFAULT NULL,
+  PRIMARY KEY (ORDER_ID)
+);
