@@ -1,9 +1,9 @@
 package com.itwpsb.model;
 
-public class Purchase {
+public class Order {
 
     private int id;
-    private Product product;
+    private Item item;
     private double quantity;
     private String unit;
     private double rate;
@@ -17,12 +17,12 @@ public class Purchase {
         this.id = id;
     }
 
-    public Product getProduct() {
-        return product;
+    public Item getItem() {
+        return item;
     }
 
-    public void setProduct(Product product) {
-        this.product = product;
+    public void setItem(Item item) {
+        this.item = item;
     }
 
     public double getQuantity() {
@@ -59,7 +59,7 @@ public class Purchase {
 
     @Override
     public String toString() {
-        return "Purchase{" + "id=" + id + ", product=" + product + ", quantity=" + quantity + ", unit=" + unit + ", rate=" + rate + ", amount=" + amount + '}';
+        return "Purchase{" + "id=" + id + ", item=" + item + ", quantity=" + quantity + ", unit=" + unit + ", rate=" + rate + ", amount=" + amount + '}';
     }
 
 }

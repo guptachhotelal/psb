@@ -1,8 +1,8 @@
 package com.itwpsb.repository;
 
-import com.itwpsb.model.Sale;
+import com.itwpsb.model.Item;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface SaleRepository extends JpaRepository<Sale, Integer> {
+public interface ItemRepository extends JpaRepository<Item, Integer> {
 
 }
